@@ -24,6 +24,8 @@ cp sample.env .env
 npm install 
 ```
 
+NOTE: *You need to have in your system [Node.JS](https://nodejs.org/en/) to install [Nightwatch.js](http://nightwatchjs.org/)
+
 ### Running test
 
 4) Inside the same folder that has the nightwatch.conf.js type:
