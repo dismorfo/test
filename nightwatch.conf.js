@@ -7,7 +7,7 @@ const SCREENSHOT_PATH = "./node_modules/nightwatch/screenshots/" + PKG.version +
 
 const config = { // we use a nightwatch.conf.js file so we can include comments and helper functions
   "src_folders": [
-     'test'
+     'test/e2e'
   ],
   "output_folder": "./node_modules/nightwatch/reports", // reports (test outcome) output by Nightwatch
   "selenium": {
@@ -22,7 +22,6 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
   },
   "test_workers" : {"enabled" : true, "workers" : "auto"}, // perform tests in parallel where possible
   "test_settings": {
-
     "default": {
       "launch_url": "http://localhost",
       "selenium_port": 4444,
@@ -46,34 +45,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
-    },
-    "mocha": {
-      "launch_url": "http://localhost",
-      "selenium_port": 4444,
-      "selenium_host": "127.0.0.1",
-      "silent": true,
-      "screenshots": {
-        "enabled": true, // save screenshots taken here
-        "path": SCREENSHOT_PATH
-      }, // this allows us to control the
-      "globals": {
-        "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
-      },
-      "test_runner" : {
-        "type" : "mocha"
-      },
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "chromeOptions": {
-          "args": [
-            `Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46
-            (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3`
-          ]
-        },
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
-      }
-    }    
+    }  
   }
 }
 module.exports = config;
