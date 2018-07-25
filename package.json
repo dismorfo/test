@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "scripts": {
+    "test": "./node_modules/nightwatch/bin/nightwatch --env default"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^2.40.0",
+    "env2": "^2.2.2",
+    "nightwatch": "^1.0.8",
+    "selenium-download": "^2.0.12",
+    "selenium-server": "^3.13.0"
+  }
+}
